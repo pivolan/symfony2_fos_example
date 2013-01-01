@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="doctrine_mongodb" class="Doctrine\Bundle\MongoDBBundle\ManagerRegistry">
+            <argument>MongoDB</argument>
+            <argument>%doctrine.odm.mongodb.connections%</argument>
+            <argument>%doctrine.odm.mongodb.document_managers%</argument>
+            <argument>%doctrine.odm.mongodb.default_connection%</argument>
+            <argument>%doctrine.odm.mongodb.default_document_manager%</argument>
+            <argument>Doctrine\ODM\MongoDB\Proxy\Proxy</argument>
+            <call method="setContainer">
+                <argument type="service" id="service_container" />
+            </call>
+        </service>
+    </services>
+</container>

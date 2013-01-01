@@ -1,0 +1,23 @@
+parameters:
+#    database_driver:   pdo_mysql
+#    database_host:     localhost
+#    database_port:     ~
+#    database_name:     symfony
+#    database_user:     root
+#    database_password: ~
+
+#doctrine_mongodb
+    doctrine_mongodb_server:                mongodb://127.0.0.1:27017/
+    doctrine_mongodb_default_database:      *****
+    doctrine_mongodb_username:              admin
+    doctrine_mongodb_password:              *****
+
+#__doctrine_mongodb
+
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+
+    locale:            ru
+    secret:            HdsoidxgjGR7****
